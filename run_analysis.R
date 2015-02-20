@@ -1,4 +1,4 @@
-  setwd("C:/Joel_Work/Coursera/8_Getting_and_Cleaning_Data_JH/Assignments")
+  #setwd("C:/Joel_Work/Coursera/8_Getting_and_Cleaning_Data_JH/Assignments")
   activity_labels = read.csv("activity_labels.txt", header = FALSE, sep = "", stringsAsFactors = FALSE)
   colnames(activity_labels)[1] = "Activity"
   colnames(activity_labels)[2] = "Activity_Label"
@@ -10,24 +10,24 @@
   #1.Merges the training and the test sets to create one data set.
   
   #First combine the training and test sets into one set for each of the three file types:
-  setwd("C:/Joel_Work/Coursera/8_Getting_and_Cleaning_Data_JH/Assignments/test")
+  #setwd("C:/Joel_Work/Coursera/8_Getting_and_Cleaning_Data_JH/Assignments/test")
   subject_test = read.table("subject_test.txt", stringsAsFactors = FALSE)
-  setwd("C:/Joel_Work/Coursera/8_Getting_and_Cleaning_Data_JH/Assignments/train")
+  #setwd("C:/Joel_Work/Coursera/8_Getting_and_Cleaning_Data_JH/Assignments/train")
   subject_train = read.table("subject_train.txt", stringsAsFactors = FALSE)
   subject_data = rbind(subject_test,subject_train)
   colnames(subject_data)[1] = "Subject"
   
   
-  setwd("C:/Joel_Work/Coursera/8_Getting_and_Cleaning_Data_JH/Assignments/test")
+  #setwd("C:/Joel_Work/Coursera/8_Getting_and_Cleaning_Data_JH/Assignments/test")
   Y_test = read.table("Y_test.txt", stringsAsFactors = FALSE)
-  setwd("C:/Joel_Work/Coursera/8_Getting_and_Cleaning_Data_JH/Assignments/train")
+  #setwd("C:/Joel_Work/Coursera/8_Getting_and_Cleaning_Data_JH/Assignments/train")
   Y_train = read.table("Y_train.txt", stringsAsFactors = FALSE)
   Y_data = rbind(Y_test,Y_train)
   colnames(Y_data)[1] = "Activity"
   
-  setwd("C:/Joel_Work/Coursera/8_Getting_and_Cleaning_Data_JH/Assignments/test")
+  #setwd("C:/Joel_Work/Coursera/8_Getting_and_Cleaning_Data_JH/Assignments/test")
   X_test = read.table("X_test.txt", stringsAsFactors = FALSE)
-  setwd("C:/Joel_Work/Coursera/8_Getting_and_Cleaning_Data_JH/Assignments/train")
+  #setwd("C:/Joel_Work/Coursera/8_Getting_and_Cleaning_Data_JH/Assignments/train")
   X_train = read.table("X_train.txt", stringsAsFactors = FALSE)
   X_data = rbind(X_test,X_train)
   
